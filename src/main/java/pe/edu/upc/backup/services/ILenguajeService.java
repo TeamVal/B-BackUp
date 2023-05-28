@@ -8,4 +8,9 @@ import java.util.List;
 public interface ILenguajeService {
     public void insert(Lenguaje lenguaje);
     List<Lenguaje> list();
+
+    public void delete(int id);
+
+    public Lenguaje listId(int id);
+
 }

@@ -27,4 +27,22 @@ public class LenguajeController {
             return m.map(x, LenguajeDTO.class);
         }).collect(Collectors.toList());
     }
+    @DeleteMapping("/{id}")
+    public void delete(@PathVariable("id")Integer id){
+        lS.delete(id);
+
+    }
+    @GetMapping("/{id}")
+    public LenguajeDTO listId(@PathVariable("id") Integer id){
+        ModelMapper m= new ModelMapper();
+        LenguajeDTO dto = m.map(lS.listId(id),LenguajeDTO.class);
+        return dto;
+    }
+    @PutMapping
+    public void update(@RequestBody LenguajeDTO dto){
+        ModelMapper m = new ModelMapper();
+        Lenguaje l = m.map(dto, Lenguaje.class);
+        lS.insert(l);
+
+    }
 }

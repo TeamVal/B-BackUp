@@ -21,4 +21,16 @@ public class LenguajeServiceImplement implements ILenguajeService {
     public List<Lenguaje> list() {
         return lR.findAll();
     }
+
+    @Override
+    public void delete(int id) {
+    lR.deleteById(id);
+
+    }
+
+    @Override
+    public Lenguaje listId(int id) {
+        return lR.findById(id).orElse(new Lenguaje());
+    }
+
 }
