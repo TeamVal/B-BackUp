@@ -12,7 +12,7 @@ import javax.persistence.*;
 public class Estudiante {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+    private int id;
 
     @Column(name = "nombre", nullable = false)
     private String nombre;
@@ -21,7 +21,7 @@ public class Estudiante {
     private String apellido;
 
     @Column(name = "telefono", nullable = false)
-    private Long telefono;
+    private int telefono;
 
     @Column(name = "correo", nullable = false)
     private String correo;
@@ -29,18 +29,18 @@ public class Estudiante {
     public Estudiante() {
     }
 
-    public Estudiante(String nombre, String apellido, Long telefono, String correo) {
+    public Estudiante(String nombre, String apellido, int telefono, String correo) {
         this.nombre = nombre;
         this.apellido = apellido;
         this.telefono = telefono;
         this.correo = correo;
     }
 
-    public Long getId() {
+    public int getId() {
         return id;
     }
 
-    public void setId(Long id) {
+    public void setId(int id) {
         this.id = id;
     }
 
@@ -60,11 +60,11 @@ public class Estudiante {
         this.apellido = apellido;
     }
 
-    public Long getTelefono() {
+    public int getTelefono() {
         return telefono;
     }
 
-    public void setTelefono(Long telefono) {
+    public void setTelefono(int telefono) {
         this.telefono = telefono;
     }
 

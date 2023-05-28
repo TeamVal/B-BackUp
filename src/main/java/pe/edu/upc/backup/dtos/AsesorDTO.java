@@ -5,23 +5,23 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 
 public class AsesorDTO {
-    private Long id;
+    private int id;
 
     private String ape;
 
     private String nom;
 
-    private Long tel;
+    private int tel;
 
     private String correo;
 
     private String arch;
 
-    public Long getId() {
+    public int getId() {
         return id;
     }
 
-    public void setId(Long id) {
+    public void setId(int id) {
         this.id = id;
     }
 
@@ -41,11 +41,11 @@ public class AsesorDTO {
         this.nom = nom;
     }
 
-    public Long getTel() {
+    public int getTel() {
         return tel;
     }
 
-    public void setTel(Long tel) {
+    public void setTel(int tel) {
         this.tel = tel;
     }
 

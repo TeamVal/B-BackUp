@@ -13,7 +13,7 @@ import javax.persistence.*;
 public class Asesor {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+    private int id;
 
     @Column(name = "ape", nullable = false)
     private String ape;
@@ -22,7 +22,7 @@ public class Asesor {
     private String nom;
 
     @Column(name = "tel", nullable = false)
-    private Long tel;
+    private int tel;
 
     @Column(name = "correo", nullable = false)
     private String correo;
@@ -32,7 +32,7 @@ public class Asesor {
 
     public Asesor() {
     }
-    public Asesor(String ape, String nom, Long tel, String correo, String arch) {
+    public Asesor(String ape, String nom, int tel, String correo, String arch) {
         this.ape = ape;
         this.nom = nom;
         this.tel = tel;
@@ -40,11 +40,11 @@ public class Asesor {
         this.arch = arch;
     }
 
-    public Long getId() {
+    public int getId() {
         return id;
     }
 
-    public void setId(Long id) {
+    public void setId(int id) {
         this.id = id;
     }
 
@@ -64,11 +64,11 @@ public class Asesor {
         this.nom = nom;
     }
 
-    public Long getTel() {
+    public int getTel() {
         return tel;
     }
 
-    public void setTel(Long tel) {
+    public void setTel(int tel) {
         this.tel = tel;
     }
 

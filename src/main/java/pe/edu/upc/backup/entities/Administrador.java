@@ -13,7 +13,7 @@ import javax.persistence.*;
 public class Administrador {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+    private int id;
 
     @Column(name = "usuario", nullable = false)
     private String usuario;
@@ -33,11 +33,11 @@ public class Administrador {
         this.codigo = codigo;
     }
 
-    public Long getId() {
+    public int getId() {
         return id;
     }
 
-    public void setId(Long id) {
+    public void setId(int id) {
         this.id = id;
     }
 

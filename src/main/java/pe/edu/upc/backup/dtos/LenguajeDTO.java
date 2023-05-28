@@ -5,16 +5,16 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 
 public class LenguajeDTO {
-    private Long id;
+    private int id;
     private String descrip;
     private String abrev;
     private String tipoLeng;
 
-    public Long getId() {
+    public int getId() {
         return id;
     }
 
-    public void setId(Long id) {
+    public void setId(int id) {
         this.id = id;
     }
 

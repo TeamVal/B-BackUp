@@ -13,7 +13,7 @@ import javax.persistence.*;
 public class Lenguaje {
     @Id
     @GeneratedValue (strategy = GenerationType.IDENTITY)
-    private Long id;
+    private int id;
     @Column (name = "descrip", nullable = false)
     private String descrip;
     @Column (name = "abrev", nullable = false)
@@ -30,11 +30,11 @@ public class Lenguaje {
         this.tipoLeng = tipoLeng;
     }
 
-    public Long getId() {
+    public int getId() {
         return id;
     }
 
-    public void setId(Long id) {
+    public void setId(int id) {
         this.id = id;
     }
 

@@ -5,7 +5,7 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 
 public class AdministradorDTO {
-    private Long id;
+    private int id;
 
     private String usuario;
 
@@ -13,11 +13,11 @@ public class AdministradorDTO {
 
     private String codigo;
 
-    public Long getId() {
+    public int getId() {
         return id;
     }
 
-    public void setId(Long id) {
+    public void setId(int id) {
         this.id = id;
     }
 
