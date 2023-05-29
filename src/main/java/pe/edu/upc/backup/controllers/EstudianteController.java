@@ -27,4 +27,19 @@ public class EstudianteController {
             return m.map(x, EstudianteDTO.class);
         }).collect(Collectors.toList());
     }
+    @DeleteMapping("/{id}")
+    public void delete(@PathVariable("id")Integer id){eS.delete(id);}
+    @GetMapping("/{id}")
+    public EstudianteDTO listID(@PathVariable("id")Integer id){
+        ModelMapper m=new ModelMapper();
+        EstudianteDTO dto=m.map(eS.listId(id),EstudianteDTO.class);
+        return dto;
+    }
+    @PutMapping
+    public void update(@RequestBody EstudianteDTO dto) {
+        ModelMapper m = new ModelMapper();
+        Estudiante e = m.map(dto, Estudiante.class);
+        eS.insert(e);
+    }
+
 }
