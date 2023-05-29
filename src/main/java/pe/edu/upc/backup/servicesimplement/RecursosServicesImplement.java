@@ -21,4 +21,13 @@ public class RecursosServicesImplement implements IRecursosAService {
     public List<RecursosA> list() {
         return rR.findAll();
     }
+    @Override
+    public void delete(int idRecur){
+
+       rR.deleteById(idRecur);
+    }
+    @Override
+    public RecursosA listId(int idRecur) {
+        return rR.findById(idRecur).orElse(new RecursosA());
+    }
 }

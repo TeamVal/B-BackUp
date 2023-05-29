@@ -7,4 +7,6 @@ import java.util.List;
 public interface IRecursosAService {
     public void insert(RecursosA recursosA);
     List<RecursosA> list();
+    public void delete(int idRecur);
+    public RecursosA listId(int idRecur);
 }

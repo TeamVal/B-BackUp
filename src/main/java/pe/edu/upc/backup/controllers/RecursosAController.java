@@ -28,4 +28,23 @@ public class RecursosAController {
             return m.map(x, RecursosADTO.class);
         }).collect(Collectors.toList());
     }
+    @DeleteMapping("/{id}")
+    public void delete(@PathVariable("id") Integer id){
+
+        lS.delete(id);
+    }
+    @GetMapping("/{id}")
+    public RecursosADTO listId(@PathVariable("id") Integer id){
+
+        ModelMapper m=new ModelMapper();
+        RecursosADTO dto=m.map(lS.listId(id),RecursosADTO.class);
+        return dto;
+    }
+    @PutMapping
+    public void update(@RequestBody RecursosADTO dto){
+        ModelMapper m=new ModelMapper();
+        RecursosA r=m.map(dto, RecursosA.class);
+        lS.insert(r);
+    }
+
 }
