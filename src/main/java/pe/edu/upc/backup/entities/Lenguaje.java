@@ -13,7 +13,7 @@ import javax.persistence.*;
 public class Lenguaje {
     @Id
     @GeneratedValue (strategy = GenerationType.IDENTITY)
-    private int id;
+    private int idLenguaje;
     @Column (name = "descrip", nullable = false)
     private String descrip;
     @Column (name = "abrev", nullable = false)
@@ -24,18 +24,19 @@ public class Lenguaje {
     public Lenguaje() {
     }
 
-    public Lenguaje(String descrip, String abrev, String tipoLeng) {
+    public Lenguaje(int idLenguaje, String descrip, String abrev, String tipoLeng) {
+        this.idLenguaje = idLenguaje;
         this.descrip = descrip;
         this.abrev = abrev;
         this.tipoLeng = tipoLeng;
     }
 
-    public int getId() {
-        return id;
+    public int getIdLenguaje() {
+        return idLenguaje;
     }
 
-    public void setId(int id) {
-        this.id = id;
+    public void setIdLenguaje(int idLenguaje) {
+        this.idLenguaje = idLenguaje;
     }
 
     public String getDescrip() {

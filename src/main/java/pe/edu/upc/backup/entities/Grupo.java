@@ -8,7 +8,7 @@ import java.time.LocalDate;
 public class Grupo {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int id;
+    private int idGrupo;
     @Column(name = "nombre", length=50, nullable = false)
     private String nombre;
     @Column(name = "descripcion", length=400, nullable = false)
@@ -19,19 +19,19 @@ public class Grupo {
     public Grupo() {
     }
 
-    public Grupo(int id, String nombre, String descripcion, LocalDate fechaCrear) {
-        this.id = id;
+    public Grupo(int idGrupo, String nombre, String descripcion, LocalDate fechaCrear) {
+        this.idGrupo = idGrupo;
         this.nombre = nombre;
         this.descripcion = descripcion;
         this.fechaCrear = fechaCrear;
     }
 
-    public int getId() {
-        return id;
+    public int getIdGrupo() {
+        return idGrupo;
     }
 
-    public void setId(int id) {
-        this.id = id;
+    public void setIdGrupo(int idGrupo) {
+        this.idGrupo = idGrupo;
     }
 
     public String getNombre() {

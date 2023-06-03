@@ -13,7 +13,7 @@ import javax.persistence.*;
 public class Asesor {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int id;
+    private int idAsesor;
 
     @Column(name = "ape", nullable = false)
     private String ape;
@@ -32,7 +32,9 @@ public class Asesor {
 
     public Asesor() {
     }
-    public Asesor(String ape, String nom, int tel, String correo, String arch) {
+
+    public Asesor(int idAsesor, String ape, String nom, int tel, String correo, String arch) {
+        this.idAsesor = idAsesor;
         this.ape = ape;
         this.nom = nom;
         this.tel = tel;
@@ -40,12 +42,12 @@ public class Asesor {
         this.arch = arch;
     }
 
-    public int getId() {
-        return id;
+    public int getIdAsesor() {
+        return idAsesor;
     }
 
-    public void setId(int id) {
-        this.id = id;
+    public void setIdAsesor(int idAsesor) {
+        this.idAsesor = idAsesor;
     }
 
     public String getApe() {

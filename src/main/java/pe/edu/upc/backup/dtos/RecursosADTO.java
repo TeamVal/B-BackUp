@@ -5,7 +5,7 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 
 public class RecursosADTO {
-    private int id;
+    private int idRecursosA;
 
     private String titulo;
 
@@ -17,12 +17,12 @@ public class RecursosADTO {
 
     private String tamano;
 
-    public int getId() {
-        return id;
+    public int getIdRecursosA() {
+        return idRecursosA;
     }
 
-    public void setId(int id) {
-        this.id = id;
+    public void setIdRecursosA(int idRecursosA) {
+        this.idRecursosA = idRecursosA;
     }
 
     public String getTitulo() {

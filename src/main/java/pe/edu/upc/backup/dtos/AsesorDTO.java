@@ -5,7 +5,7 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 
 public class AsesorDTO {
-    private int id;
+    private int idAsesor;
 
     private String ape;
 
@@ -17,12 +17,12 @@ public class AsesorDTO {
 
     private String arch;
 
-    public int getId() {
-        return id;
+    public int getIdAsesor() {
+        return idAsesor;
     }
 
-    public void setId(int id) {
-        this.id = id;
+    public void setIdAsesor(int idAsesor) {
+        this.idAsesor = idAsesor;
     }
 
     public String getApe() {

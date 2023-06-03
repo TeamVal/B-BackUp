@@ -3,17 +3,17 @@ import java.time.LocalDate;
 
 public class GrupoDTO {
 
-    private int id;
+    private int idGrupo;
     private String nombre;
     private String descripcion;
     private LocalDate fechaCrear;
 
-    public int getId() {
-        return id;
+    public int getIdGrupo() {
+        return idGrupo;
     }
 
-    public void setId(int id) {
-        this.id = id;
+    public void setIdGrupo(int idGrupo) {
+        this.idGrupo = idGrupo;
     }
 
     public String getNombre() {

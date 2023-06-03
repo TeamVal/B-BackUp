@@ -5,17 +5,21 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 
 public class LenguajeDTO {
-    private int id;
+    private int idLenguaje;
     private String descrip;
     private String abrev;
     private String tipoLeng;
 
-    public int getId() {
-        return id;
+    public int getIdLenguaje() {
+        return idLenguaje;
     }
 
-    public void setId(int id) {
-        this.id = id;
+    public void setIdLenguaje(int idLenguaje) {
+        this.idLenguaje = idLenguaje;
+    }
+
+    public void setDescrip(String descrip) {
+        this.descrip = descrip;
     }
 
     public String getDescrip() {
